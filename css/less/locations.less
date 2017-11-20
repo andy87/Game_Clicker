@@ -1,0 +1,51 @@
+#location {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  .location{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    .build {
+      display: inline-block;
+      margin: 25px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid rgba(0,0,0,0.1);
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      &.arena{ background-image: url('../img/build/arena.png');}
+      &.shop{ background-image: url('../img/build/shop.png');}
+      &.smith{ background-image: url('../img/build/blacksmith.png');}
+    }
+
+    .place_exit {
+      display: inline-block;
+      position: absolute;
+      right: 15px;
+      top:  15px;
+      width: 64px;
+      height: 64px;
+      cursor: pointer;
+      background-image: url('../img/buttons/return.png');
+    }
+
+    &.place{
+      padding: 10% 0 0 0;
+      background-size: contain;
+      background-image: url('../img/background/bg_1.jpg');
+    }
+    &.arena{ background-image: url('../img/background/place/arena.jpg');}
+    &.shop{ background-image: url('../img/background/place/shop_1.jpg');}
+    &.smith{ background-image: url('../img/background/place/blacksmith.jpg');}
+  }
+
+
+
+}

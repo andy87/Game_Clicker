@@ -1,0 +1,144 @@
+
+@profile_width : 360px;
+@profile_height : 530px;
+@profile_content_width : 260px;
+@icon_size : 64px;
+
+
+#profile {
+  position: absolute;
+  width: @profile_width;
+  height: @profile_height;
+  padding: 10px;
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 7px;
+  box-shadow: 5px 5px 30px -5px #000;
+  z-index: 99;
+
+  :hover{
+    z-index: 999;
+  }
+
+  .profile-tilte {
+    margin-bottom: 5px;
+    padding: 5px 0 5px 10px;
+    border: 1px solid #666;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+    &:hover{
+      cursor: move;
+    }
+  }
+
+
+  @tabs-size : 32px;
+
+  .close-wrapper {
+    display: inline-block;
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: #fff;
+    color: #300;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    &:hover{
+      border-color: red;
+      font-weight: bold;
+    }
+  }
+
+  .profile-tabs{
+    position: absolute;
+    left: -2px;
+    top: 110px;
+    width: @tabs-size;
+
+    .tabs-item{
+      display: block;
+      height: @tabs-size;
+      width: @tabs-size;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: @tabs-size;
+      text-align: center;
+      text-decoration: none;
+      border-left: none !important;
+
+      &.active {
+        padding-left: 2px;
+      }
+
+      &.info,
+      &.stats,
+      &.inventory{
+        border: 1px solid #000;
+      }
+      &.info{
+        border-color: red;
+      }
+      &.stats{
+        border-color: green;
+      }
+      &.inventory{
+        border-color: blue;
+      }
+    }
+  }
+
+  .tabs-body{
+    width: 290px;
+    margin: 0 auto;
+
+    &#profile-info {
+
+      .personage.info {
+
+        IMG.avatar {
+          width: @profile_content_width;
+          display: block;
+          margin: 0 auto;
+        }
+
+        .bar-style(){
+          display: block;
+          width: @profile_content_width;
+          height: @icon_size;
+          margin: 0 auto;
+        }
+
+        .tools-bar{
+
+          text-align: center;
+
+          .bar-style();
+
+          .player-tool{
+            .bar-style();
+
+            &.main,
+            &.chest,
+            &.second{
+              display: inline-block;
+              vertical-align: top;
+              width: @icon_size;
+              height: @icon_size;
+              margin: 5px;
+              border: 1px solid #666;
+            }
+          }
+        }
+
+      }
+    }
+
+
+  }
+}

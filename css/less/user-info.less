@@ -1,0 +1,93 @@
+
+#user-info {
+  position: fixed;
+  width: 350px;
+  padding: 10px;
+
+  .user-portrait{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    .user-pic{
+      display: inline-block;
+      width: 85px;
+      border-radius: 50%;
+      border: 2px solid #666;
+    }
+
+    .reset,
+    .user-level{
+      @height : 22px;
+
+      position: absolute;
+      left: 5px;
+      top: 50px;
+      width: @height;
+      height: @height;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: @height;
+      text-align: center;
+      background: #fff;
+      border: 1px solid #555;
+      border-radius: 50%;
+    }
+    .reset {
+      color: red;
+      left: auto;
+      right:0;
+      top: 0;
+    }
+  }
+
+  .user-status{
+    display: inline-block;
+    vertical-align: top;
+    width: 225px;
+
+    .user-name{
+      display: block;
+      width: 100%;
+      margin-bottom: 3px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .progress-bar{
+      @height : 18px;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      width: 250px;
+      height: @height;
+      border: 1px solid #030;
+      border-bottom-right-radius: 20px;
+
+      .progress-text{
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: @height;
+        padding-left: 5px;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: @height;
+      }
+
+      .progress-line{
+        display: inline-block;
+        height: 100%;
+        background: #090;
+        transition: width 1s linear;
+      }
+    }
+  }
+
+}
